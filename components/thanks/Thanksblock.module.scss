@@ -1,0 +1,45 @@
+@import '../../helpers/variables.scss';
+.thanks_block {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    @media (min-height: 832px) {
+        height: calc(100vh - 270px);
+    }
+    .img {
+        margin: 50px auto;
+        width: 80%;
+    }
+    .thanks_title {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 50px;
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+    }
+    .thanks_subtitle {
+        margin-bottom: 50px;
+    }
+    .thanks_link {
+        @include button;
+        display: block;
+        padding: 15px;
+        width: 35%;
+        margin-bottom: 50px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        border: 1px solid $firm_mint;
+        background-color: $firm_mint;
+        &:hover {
+            color: black;
+            background-color: #fff;
+        }
+        @media (max-width: 768px) {
+            font-size: 9px;
+            max-width: 150px;
+            padding: 9px;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@import '../../helpers/variables.scss';
+.catalog_list {
+    .catalog_list_box {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .catalog_list_title {
+        padding: 50px 0 20px 0;
+        font-size: 45px;
+        text-align: center;
+        font-weight: 500;
+        text-transform: uppercase;
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+    }
+    .catalog_list_subtitle {
+        font-size: 25px;
+        text-align: center;
+        padding-bottom: 30px;
+        @media (max-width: 768px) {
+            font-size: 18px;
+        }
+    }
+    .catalog_list_select {
+        font-size: 13px;
+        padding: 15px 20px;
+    }
+    .catalog_list_card {
+        margin: 15px;
+        // text-align: left;
+        //min-height: 650px;
+        &_name {
+            font-size: 24px;
+            font-weight: 700;
+            padding-top: 8px;
+            padding-bottom: 16px;
+            min-height: 78px;
+            @media (max-width: 600px) {
+                font-size: 19px;
+            }
+        }
+        &_price {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        &_desc {
+            min-height: 80px;
+            @media (max-width: 600px) {
+                min-height: 100px;
+            }
+            p {
+                font-size: 14px;
+                @media (max-width: 600px) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    &_buttons .more_button,
+    &_buttons .basket_button {
+        @include button;
+        padding: 10px;
+        margin: 10px auto;
+        width: 140px;
+        @media (max-width: 600px) {
+            font-size: 12px;
+            max-width: 100px;
+            padding: 6px;
+        }
+    }
+    &_buttons .basket_button {
+        color: white;
+        border: 1px solid $firm_mint;
+        background-color: $firm_mint;
+        &:hover {
+            color: black;
+            background-color: #fff;
+        }
+    }
+    &_buttons .more_button {
+        color: black;
+        border: 1px solid black;
+        &:hover {
+            background-color: $dark_grey;
+            color: white;
+        }
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .swiper-slide {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $firm_mint;
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
+}

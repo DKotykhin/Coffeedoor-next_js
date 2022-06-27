@@ -1,0 +1,73 @@
+{
+    "coffeeitems": [{
+            "title": "Кава в зернах",
+            "name": "Brazil Cerrado",
+            "weight": "250г",
+            "price": 229,
+            "description": "Горіхово-шоколадні ноти, ромовий бісквіт, солона карамель. Обсмаження: Еспресо. Спосіб обробки зерна: натуральний. 100% арабіка",
+            "card_img": "coffee/Brazil_Cerrado.webp",
+            "list_img": ["coffee/Brazil_Cerrado.webp"],
+            "tm": "TM Coffeedoor"
+        },
+        {
+            "title": "Кава в зернах",
+            "name": "Tanzania AA Yetu Tamu",
+            "weight": "250г",
+            "price": 249,
+            "description": "Виноград, лайм, какао. Обсмаження: Фільтр. Спосіб обробки зерна: митий. 100% арабіка",
+            "card_img": "coffee/Tanzania_AA_Yetu_Tamu.webp",
+            "list_img": ["coffee/Tanzania_AA_Yetu_Tamu.webp"],
+            "tm": "TM Coffeedoor"
+        },
+        {
+            "title": "Кава в зернах",
+            "name": "Honduras Beneficio Santa Rosa",
+            "weight": "250г",
+            "price": 229,
+            "description": "Горіх, іриска, карамельне яблуко, молочний шоколад. Обсмаження: Еспресо. Спосіб обробки зерна: митий. 100% арабіка",
+            "card_img": "coffee/Honduras_Beneficio_Santa_Rosa.webp",
+            "list_img": ["coffee/Honduras_Beneficio_Santa_Rosa.webp"],
+            "tm": "TM Coffeedoor"
+        },
+        {
+            "title": "Кава в зернах",
+            "name": "Rwanda Kinini",
+            "weight": "250г",
+            "price": 399,
+            "description": "Журавлина, манго, кленовий сироп, шоколад. Обсмаження: Фільтр. Спосіб обробки зерна: натуральний. 100% арабіка",
+            "card_img": "coffee/Rwanda_Kinini.webp",
+            "list_img": ["coffee/Rwanda_Kinini.webp"],
+            "tm": "TM Coffeedoor"
+        },
+        {
+            "title": "Кава в зернах",
+            "name": "Guatemala Coban",
+            "weight": "250г",
+            "price": 269,
+            "description": "Кісточкові фрукти, горіхові ноти, чорний шоколад. Обсмаження: Еспресо. Спосіб обробки зерна: митий. 100% арабіка",
+            "card_img": "coffee/Guatemala_Coban.webp",
+            "list_img": ["coffee/Guatemala_Coban.webp"],
+            "tm": "TM Coffeedoor"
+        },
+        {
+            "title": "Кава в зернах",
+            "name": "Colombia Excelso",
+            "weight": "250г",
+            "price": 249,
+            "description": "Шоколад, апельсин, кісточкові фрукти. Обсмаження: Фільтр. Спосіб обробки зерна: натуральний. 100% арабіка",
+            "card_img": "coffee/Colombia_Excelso.webp",
+            "list_img": ["coffee/Colombia_Excelso.webp"],
+            "tm": "TM Coffeedoor"
+        },
+        {
+            "title": "Кава в зернах",
+            "name": "Kenja AB Asali",
+            "weight": "250г",
+            "price": 269,
+            "description": "Квітково-ягідний аромат з нотами лимонної трави та цитрусів. Обсмаження: Еспресо. Спосіб обробки зерна: митий. 100% арабіка",
+            "card_img": "coffee/Kenja_Asali.webp",
+            "list_img": ["coffee/Kenja_Asali.webp"],
+            "tm": "TM Coffeedoor"
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "jamitems": [{
+            "title": "Варення",
+            "name": "з волоських горіхів",
+            "weight": "350г",
+            "price": 290,
+            "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
+            "card_img": "jam/Варення_з_горіхів.webp",
+            "list_img": ["jam/Варення_з_горіхів.webp"],
+            "tm": "TM Artvillage"
+        },
+        {
+            "title": "Варення",
+            "name": "з cоснових шишок",
+            "weight": "380г",
+            "price": 290,
+            "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
+            "card_img": "jam/Варення_з_шишок.webp",
+            "list_img": ["jam/Варення_з_шишок.webp"],
+            "tm": "TM Artvillage"
+        },
+        {
+            "title": "Варення",
+            "name": "з пелюсток чайної троянди",
+            "weight": "350г",
+            "price": 225,
+            "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
+            "card_img": "jam/Варення_з_троянди.webp",
+            "list_img": ["jam/Варення_з_троянди.webp"],
+            "tm": "TM Artvillage"
+        },
+        {
+            "title": "Варення",
+            "name": "з цитрусів із зернами кави 'помаранчевий настрій'",
+            "weight": "360г",
+            "price": 250,
+            "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
+            "card_img": "jam/Варення_з_цитрусів.webp",
+            "list_img": ["jam/Варення_з_цитрусів.webp"],
+            "tm": "TM Artvillage"
+        },
+        {
+            "title": "Варення",
+            "name": "з бузини",
+            "weight": "360г",
+            "price": 225,
+            "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
+            "card_img": "jam/Варення_з_бузини.webp",
+            "list_img": ["jam/Варення_з_бузини.webp"],
+            "tm": "TM Artvillage"
+        },
+        {
+            "title": "Варення",
+            "name": "з айви",
+            "weight": "375г",
+            "price": 225,
+            "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
+            "card_img": "jam/Варення_з_айви.webp",
+            "list_img": ["jam/Варення_з_айви.webp"],
+            "tm": "TM Artvillage"
+        },
+        {
+            "title": "Варення",
+            "name": "персикове з лавандою",
+            "weight": "375г",
+            "price": 250,
+            "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
+            "card_img": "jam/Варення_персикове.webp",
+            "list_img": ["jam/Варення_персикове.webp"],
+            "tm": "TM Artvillage"
+        },
+        {
+            "title": "",
+            "name": "Горіхи в сиропі з квіток кульбаби (мигдаль, фундук, волоський горіх)",
+            "weight": "330г",
+            "price": 250,
+            "description": "Виробник: Сімейна гастрономічна майстерня Artvillage",
+            "card_img": "jam/Горіхи_в_сиропі.webp",
+            "list_img": ["jam/Горіхи_в_сиропі.webp"],
+            "tm": "TM Artvillage"
+        }
+    ]
+}
