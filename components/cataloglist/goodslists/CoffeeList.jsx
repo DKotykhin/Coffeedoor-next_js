@@ -16,8 +16,7 @@ const CoffeeList = () => {
             <ListHeader 
                 title='КАВА В ЗЕРНАХ' 
                 subtitle='Свіжообсмажена кава ТМ CoffeeDOOR' />
-            <Swiper
-                className={styles.swiper}
+            <Swiper                
                 slidesPerView={1.3}
                 spaceBetween={10}
                 breakpoints={{

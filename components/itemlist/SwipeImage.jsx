@@ -14,7 +14,7 @@ const SwipeImage = () => {
     const { name, list_img } = itemdata;
     return (
         <Swiper
-            className={styles.swiper}
+            className={styles.swiper}            
             effect={"cube"}
             grabCursor={true}
             cubeEffect={{
