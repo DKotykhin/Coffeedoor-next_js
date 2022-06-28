@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 
-import styles from "./itemlist.module.scss";
+import styles from "./Itemlist.module.scss";
 
 const SwipeImage = () => {
     const { itemdata } = useSelector((state) => state.itempage);

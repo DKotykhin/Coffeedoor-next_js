@@ -13,7 +13,7 @@ import { basketAddFromItemPage } from "../basket/BasketListSlice";
 
 import SwipeImage from "./SwipeImage";
 
-import styles from "./itemlist.module.scss";
+import styles from "./Itemlist.module.scss";
 
 const style = {
     position: "absolute",
