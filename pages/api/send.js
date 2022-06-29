@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export default function handler(req, res) {
-    const TOKEN = process.env.REACT_APP_TELEGRAM_TOKEN;
-    const CHAT_ID = process.env.REACT_APP_TELEGRAM_CHAT_ID;
+    const TOKEN = process.env.TELEGRAM_TOKEN;
+    const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
     const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
     let message = `<b>Заявка з сайту</b>\n`;
     let itemSum = 0;
