@@ -60,13 +60,17 @@ export default function AboutBlock() {
                 {itemData.map((item, i) => {
                     const cols = item.size ? 2 : 1;
                     const rows = item.size ? 2 : 1;
+                    const width = item.portrait ? 567 : 850;
+                    const height = item.portrait ? 850 : 567;
                     return (
                         <ImageListItem key={i} cols={cols} rows={rows}>
                             <Image
-                                // {...srcset(item.img, 250, 200, rows, cols)}
-                                src={require(`../../images/about/${item.img}`)}                               
+                                // {...srcset(item.img, 250, 200, rows, cols)}                                
+                                src={`/aboutimages/${item.img}`}                               
                                 alt={item.title}
-                                loading="lazy"
+                                width={width}
+                                height={height}
+                                // placeholder='blur'
                             />
                         </ImageListItem>
                     );
@@ -74,21 +78,21 @@ export default function AboutBlock() {
             </ImageList>
             <Box maxWidth="md" className={styles.about_box}>
                 <Typography className={styles.about_slogan}>
-                    Our coffee – Everything matters
+                    {'Our coffee – Everything matters'}
                 </Typography>
                 <ThemeProvider theme={theme}>
                     <Typography className={[styles.about_descr, styles.about_font].join(" ")}>
-                        Особливість кав&apos;ярень CoffeeDOOR Brewbar &amp; Coffeeshop в
+                        {`Особливість кав'ярень CoffeeDOOR Brewbar & Coffeeshop в
                         цілісному підході, де все має значення. При приготуванні
                         кави кожна деталь має значення - про це свідчить слоган
-                        кав&apos;ярні, який переплітається з однією з основних
-                        цінностей бренда, - &apos;Our coffee - Everything matters&apos;,
+                        кав'ярні, який переплітається з однією з основних
+                        цінностей бренда, - "Our coffee - Everything matters",
                         що ми успішно підтверджуємо. Основа нашого бізнесу в
                         системному підході, в детальності описаних
                         бізнес-процесів, в дистрибуції кращого кавового
                         обладнання, обсмажуванні кавового зерна рівня
                         Speciality, в унікальній системі навчання бариста і
-                        системі контролю якості.
+                        системі контролю якості.`}
                     </Typography>
                     <Typography className={styles.about_font}>Ми - це:</Typography>
                     <List className={styles.list_item}>
@@ -112,10 +116,10 @@ export default function AboutBlock() {
                         }
                     </List>
                     <Typography className={[styles.about_descr, styles.about_font].join(" ")}>
-                        У наших кав&apos;ярнях ви завжди відчуєте атмосферу радості і
+                        {`У наших кав'ярнях ви завжди відчуєте атмосферу радості і
                         доброти. Ми цінуємо смак і час наших гостей. Ми знаємо,
                         як звуть постійного гостя, його звички і улюблений
-                        напій.
+                        напій.`}
                     </Typography>
                     <br />
                 </ThemeProvider>               
@@ -154,10 +158,12 @@ const itemData = [
     {
         img: "Coffeedoor_16.webp",
         title: "Coffee",
+        portrait: true
     },
     {
         img: "Coffeedoor_17.webp",
         title: "Coffee",
+        portrait: true
     },
     {
         img: "Coffeedoor_18.webp",

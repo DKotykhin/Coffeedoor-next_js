@@ -14,10 +14,11 @@ const CatalogItem = (props) => {
     
     return (                   
         <Card sx={{ maxWidth: 345 }} className={styles.catalog_list_card}>
-            <Image                
-                height="345"
-                src={require(`../../pages/api/catalog/goodsimages/${card_img}`)}
+            <Image               
+                src={`/goodsimages/${card_img}`}
                 alt={name}
+                width={350}
+                height={350}
             />
             <CardContent>
                 <Typography className={styles.catalog_list_card_name}>

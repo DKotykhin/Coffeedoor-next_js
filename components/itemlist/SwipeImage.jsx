@@ -25,11 +25,11 @@ const SwipeImage = () => {
         >
             {list_img?.map((item, i) => (
                 <SwiperSlide key={i}>
-                    <Image
-                        height="345"
-                        src={require(`../../pages/api/catalog/goodsimages/${item}`)}
+                    <Image                        
+                        src={`/goodsimages/${item}`}
                         alt={name}
-                        loading="lazy"
+                        width={350}
+                        height={350}
                     />
                 </SwiperSlide>
             ))}

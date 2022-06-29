@@ -3,19 +3,24 @@ import Link from 'next/link'
 import { Container, Typography } from "@mui/material";
 
 import Image from 'next/image'
-import img from "./Coffeedoor_logo.jpg";
+// import img from "./Coffeedoor_logo.jpg";
 
 import styles from "./Titleblock.module.scss";
 
 const TitleBlock = () => {
     return (
         <>
-            <Container maxWidth="md" className={styles.title_block}>
-                <div className={styles.img}>
-                    <Link href="/">                    
-                        <div><Image src={img} alt="logo"/></div>
-                    </Link>
-                </div>
+            <Container maxWidth="md" className={styles.title_block}>                
+                <Link href="/">                    
+                    <div className={styles.img}>
+                        <Image 
+                            src={'/logo_700x191.jpg'} 
+                            alt="logo"
+                            width={700}
+                            height={191}
+                        />
+                    </div>
+                </Link>               
                 <Typography className={styles.titleblock_name} component="h2">
                     Меню кав&apos;ярні
                 </Typography>

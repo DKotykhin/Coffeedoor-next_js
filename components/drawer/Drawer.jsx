@@ -1,11 +1,9 @@
-
 import Link from 'next/link';
 import { useState } from 'react';
 import { List, ListItem } from "@mui/material";
 import { Box, Drawer, Divider, Link as MuiLink } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import Image from 'next/image'
-import img from "../../images/logo_small.ico";
+import Image from 'next/image';
 
 import styles from "./Drawer.module.scss";
 
@@ -42,11 +40,10 @@ export default function NavDrawer() {
         >
             <List className={styles.list_items}>
                 <Image
-                    src={img}
-                    // style={{marginLeft: 10 }}
+                    src={'/logo_256x256.ico'}                   
                     alt="logo"
-                    width='100'
-                    height='100'
+                    width={100}
+                    height={100}
                 />
                 {groupOfTitle_1.map((text) => (
                     <ListItem key={text.title} disablePadding>
