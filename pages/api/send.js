@@ -3,7 +3,6 @@ import axios from "axios";
 export default function handler(req, res) {
     const TOKEN = process.env.TELEGRAM_TOKEN;
     const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
-    const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
     let message = `<b>Заявка з сайту</b>\n`;
     let itemSum = 0;
     req.body.forEach((item) => {
@@ -20,14 +19,27 @@ export default function handler(req, res) {
         }
     });
     message += `<b>Всього на сумму: </b>${itemSum} грн`;
+    const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&parse_mode=html&text=${message}`;
 
-    axios.post(URL, {
-        chat_id: CHAT_ID,
-        parse_mode: "html",
-        text: message,
-    }).catch(error => {
-        console.log(error.message);
-    });
+    // axios.post(URL, {
+    //     chat_id: CHAT_ID,
+    //     parse_mode: "html",
+    //     text: message,
+    // }).catch(error => {
+    //     console.log(error.message);
+    // });
+    async function postData(url = '') {
+        const response = await fetch(url, {
+            method: 'POST',
+
+        });
+        return await response.json(); // parses JSON response into native JavaScript objects
+    }
+
+    postData(URL)
+        .then((data) => {
+            console.log(data); // JSON data parsed by `response.json()` call
+        });
 
     res.status(200).json({ name: req.body })
 }
