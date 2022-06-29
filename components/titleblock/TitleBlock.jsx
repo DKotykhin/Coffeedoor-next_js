@@ -17,7 +17,7 @@ const TitleBlock = () => {
                     </Link>
                 </div>
                 <Typography className={styles.titleblock_name} component="h2">
-                    Меню кав'ярні
+                    Меню кав&apos;ярні
                 </Typography>
                 <Typography className={styles.titleblock_desc} component="h3">
                     ми пропонуємо напої з свіжообсмаженої кави

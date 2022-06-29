@@ -16,7 +16,7 @@ export default function Home() {
         <div>
             <Head>
                 <title>
-                    CoffeeDoor - кав'ярня та магазин свіжообсмаженої кави
+                    CoffeeDoor - кав&apos;ярня та магазин свіжообсмаженої кави
                 </title>
                 <meta charSet="utf-8" />
                 <meta

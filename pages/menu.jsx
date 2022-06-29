@@ -8,7 +8,7 @@ const MenuPage = () => {
         <div>
             <Head>
                 <meta name="description" content="Меню кав'ярні" />
-                <title>Меню кав'ярні</title>
+                <title>Меню кав&apos;ярні</title>
             </Head>
             <TitleBlock />
             <Accordeon />

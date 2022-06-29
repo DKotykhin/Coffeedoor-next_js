@@ -64,7 +64,7 @@ export default function AboutBlock() {
                         <ImageListItem key={i} cols={cols} rows={rows}>
                             <Image
                                 // {...srcset(item.img, 250, 200, rows, cols)}
-                                src={item.img}                               
+                                src={require(`../../images/about/${item.img}`)}                               
                                 alt={item.title}
                                 loading="lazy"
                             />
@@ -78,11 +78,11 @@ export default function AboutBlock() {
                 </Typography>
                 <ThemeProvider theme={theme}>
                     <Typography className={[styles.about_descr, styles.about_font].join(" ")}>
-                        Особливість кав'ярень CoffeeDOOR Brewbar & Coffeeshop в
+                        Особливість кав&apos;ярень CoffeeDOOR Brewbar &amp; Coffeeshop в
                         цілісному підході, де все має значення. При приготуванні
                         кави кожна деталь має значення - про це свідчить слоган
-                        кав'ярні, який переплітається з однією з основних
-                        цінностей бренда, - "Our coffee - Everything matters",
+                        кав&apos;ярні, який переплітається з однією з основних
+                        цінностей бренда, - &apos;Our coffee - Everything matters&apos;,
                         що ми успішно підтверджуємо. Основа нашого бізнесу в
                         системному підході, в детальності описаних
                         бізнес-процесів, в дистрибуції кращого кавового
@@ -112,7 +112,7 @@ export default function AboutBlock() {
                         }
                     </List>
                     <Typography className={[styles.about_descr, styles.about_font].join(" ")}>
-                        У наших кав'ярнях ви завжди відчуєте атмосферу радості і
+                        У наших кав&apos;ярнях ви завжди відчуєте атмосферу радості і
                         доброти. Ми цінуємо смак і час наших гостей. Ми знаємо,
                         як звуть постійного гостя, його звички і улюблений
                         напій.
@@ -126,69 +126,69 @@ export default function AboutBlock() {
 
 const itemData = [
     {
-        img: require("../../images/about/Coffeedoor_10.webp"),
+        img: "Coffeedoor_10.webp",
         title: "Coffee",
         size: true,
     },
     {
-        img: require("../../images/about/Coffeedoor_11.webp"),
+        img: "Coffeedoor_11.webp",
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_12.webp"),
+        img: "Coffeedoor_12.webp",
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_13.webp"),
+        img: "Coffeedoor_13.webp",
         title: "Coffee",
         size: true,
     },
     {
-        img: require("../../images/about/Coffeedoor_14.webp"),
+        img: "Coffeedoor_14.webp",
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_15.webp"),
+        img: "Coffeedoor_15.webp",
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_16.webp"),
+        img: "Coffeedoor_16.webp",
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_17.webp"),
+        img: "Coffeedoor_17.webp",
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_18.webp"),
+        img: "Coffeedoor_18.webp",
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_19.webp"),
+        img: "Coffeedoor_19.webp",
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_20.webp"),
+        img: "Coffeedoor_20.webp",
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_21.webp"),
+        img: "Coffeedoor_21.webp",
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_22.webp"),
+        img: "Coffeedoor_22.webp",
         title: "Coffee",
     },
     {
-        img: require("../../images/about/Coffeedoor_23.webp"),
+        img: "Coffeedoor_23.webp",
         title: "Coffee table",
     },
     {
-        img: require("../../images/about/Coffeedoor_24.webp"),
+        img: "Coffeedoor_24.webp",
         title: "Coffee table",
     },
     {
-        img: require("../../images/about/Coffeedoor_25.webp"),
+        img: "Coffeedoor_25.webp",
         title: "Coffee table",
     },
 ];

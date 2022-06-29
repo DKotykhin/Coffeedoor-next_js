@@ -22,7 +22,7 @@ const FirstBlock = () => {
                     </Typography>                
                     <Box className={styles.first_block_links}>
                         <MuiLink href="#coffee_list" className={styles.link_1}>Магазин</MuiLink>
-                        <Link href="/menu"><span className={styles.link_2}>Меню кав'ярні</span></Link>                    
+                        <Link href="/menu"><span className={styles.link_2}>Меню кав&apos;ярні</span></Link>                    
                     </Box>                
                     <ArrowBackIosIcon className={styles.first_block_icon}/>            
             </motion.div>       

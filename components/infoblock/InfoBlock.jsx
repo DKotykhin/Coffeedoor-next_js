@@ -15,18 +15,18 @@ const InfoBlock = () => {
     return (
         <Container maxWidth="md" className={styles.infoblock}>
             <Typography className={styles.infoblock_title} component="h1">
-               Кав'ярня та магазин свіжообсмаженої кави CoffeeDoor
+               Кав&apos;ярня та магазин свіжообсмаженої кави CoffeeDoor
             </Typography>
             <Typography className={styles.infoblock_subtitle} component="h2">
-                CoffeeDOOR – це кавовий бренд, який по'єднує в собі
+                CoffeeDOOR – це кавовий бренд, який по&apos;єднує в собі
                 свіжообсмажену каву рівня Speciality, кращі кавові технології,
-                стильний дизайнерський інтер'єр, швидкий і дружній сервіс
+                стильний дизайнерський інтер&apos;єр, швидкий і дружній сервіс
             </Typography>
             <ListItem>
                 <AccessTimeIcon className={styles.infoblock_icon} />
                 <ListItemText className={styles.infoblock_items}>
                     <Typography className={styles.infoblock_item_1}>
-                        Режим роботи кав'ярні
+                        Режим роботи кав&apos;ярні
                     </Typography>
                     <Typography className={styles.infoblock_item_2}>
                         Пн-Пт: 8.00 - 22.00
@@ -46,7 +46,7 @@ const InfoBlock = () => {
                         В межах міста Харків доставка здійснюється на таксі за
                         тарифами перевізника, за межами міста - Новою поштою за
                         тарифами компанії. Замовлення також можна забрати в
-                        кав'ярні
+                        кав&apos;ярні
                     </Typography>
                 </ListItemText>
             </ListItem>

@@ -29,7 +29,7 @@ const BasketForm = ({onSubmit}) => {
                 autoComplete="off"
             >
                 <ThemeProvider theme={theme}>
-                    <InputLabel htmlFor="name" className={[styles.title, styles.mb].join(" ")}>Ваше ім'я</InputLabel>
+                    <InputLabel htmlFor="name" className={[styles.title, styles.mb].join(" ")}>Ваше ім&apos;я</InputLabel>
                         <Controller
                             name="name"
                             control={control}
@@ -57,9 +57,9 @@ const BasketForm = ({onSubmit}) => {
                                         // defaultValue="забрати в кавярні"                                        
                                     >
                                         <FormControlLabel 
-                                            value="забрати в кавярні" 
+                                            value="забрати в кав'ярні" 
                                             control={<Radio />} 
-                                            label="забрати в кавярні" 
+                                            label="забрати в кав'ярні" 
                                         />
                                         <FormControlLabel 
                                             value="доставка перевізником" 

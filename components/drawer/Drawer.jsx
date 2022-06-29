@@ -72,7 +72,7 @@ export default function NavDrawer() {
             </List>
             <Box className={styles.link_item}>
                 <Link href="/menu">
-                    <span className={styles.link_button}>Меню кав'ярні</span>
+                    <span className={styles.link_button}>Меню кав&apos;ярні</span>
                 </Link>
             </Box>
         </Box>
