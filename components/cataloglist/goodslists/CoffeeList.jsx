@@ -3,7 +3,8 @@ import { Navigation } from "swiper";
 import { Container } from "@mui/material";
 
 import CatalogItem from "../CatalogItem";
-import coffeeitems from "../../../api/catalog/goodsitems/coffeelistitem.json";
+// import coffeeitems from "../../../api/catalog/goodsitems/coffeelistitem.json";
+import coffeeitems from "../../../pages/api/catalog/goodsitems/coffeelistitem.json";
 import ListHeader from "../ListHeader";
 
 import "swiper/css";

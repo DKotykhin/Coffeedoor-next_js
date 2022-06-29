@@ -9,7 +9,8 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandCircleDown";
 
 import styles from "./Accordeon.module.scss";
-import MenuList from "../../api/menu/menuItems.json";
+// import MenuList from "../../api/menu/menuItems.json";
+import MenuList from "../../pages/api/barmenu/menuItems.json";
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />

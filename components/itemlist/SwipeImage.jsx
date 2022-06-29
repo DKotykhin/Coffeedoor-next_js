@@ -7,14 +7,11 @@ import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 
-import styles from "./Itemlist.module.scss";
-
 const SwipeImage = () => {
     const { itemdata } = useSelector((state) => state.itempage);
     const { name, list_img } = itemdata;
     return (
-        <Swiper
-            className={styles.swiper}            
+        <Swiper                       
             effect={"cube"}
             grabCursor={true}
             cubeEffect={{
@@ -30,7 +27,7 @@ const SwipeImage = () => {
                 <SwiperSlide key={i}>
                     <Image
                         height="345"
-                        src={require(`../../api/catalog/goodsimages/${item}`)}
+                        src={require(`../../pages/api/catalog/goodsimages/${item}`)}
                         alt={name}
                         loading="lazy"
                     />

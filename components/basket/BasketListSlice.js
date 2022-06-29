@@ -1,6 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
-import { SendData } from "../../api/SendData";
+import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/toolkit";
 
 const initialState = {
     basketdata: [],
@@ -8,8 +6,21 @@ const initialState = {
 
 export const sendDataToTelegram = createAsyncThunk(
     "basket/sendDataToTelegram",
-    (data) => {
-        return SendData(data);
+    async(data, { rejectWithValue }) => {
+        try {
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            if (!response.ok) {
+                throw new Error("Can't send data to Telegram")
+            }
+        } catch (error) {
+            return rejectWithValue(error.message)
+        }
     }
 );
 
@@ -73,9 +84,9 @@ const basketdataListSlice = createSlice({
         basketRemoveQuantity: (state, action) => {
             state.basketdata.forEach((item) => {
                 if (item.name === action.payload) {
-                    item.quantity > 1
-                        ? (item.quantity -= 1)
-                        : (item.quantity = 1);
+                    item.quantity > 1 ?
+                        (item.quantity -= 1) :
+                        (item.quantity = 1);
                 }
             });
         },
@@ -92,9 +103,9 @@ const basketdataListSlice = createSlice({
         [sendDataToTelegram.fulfilled]: (state) => {
             state.basketdata = [];
         },
-        // [sendDataToTelegram.rejected]: (state) => {
-        //     console.log("something get wrong");
-        // },
+        [sendDataToTelegram.rejected]: (state) => {
+            console.log("something get wrong");
+        },
     },
 });
 

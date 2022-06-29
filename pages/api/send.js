@@ -1,12 +1,12 @@
 import axios from "axios";
 
-export const SendData = (data) => {
+export default function handler(req, res) {
     const TOKEN = process.env.REACT_APP_TELEGRAM_TOKEN;
     const CHAT_ID = process.env.REACT_APP_TELEGRAM_CHAT_ID;
     const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
     let message = `<b>Заявка з сайту</b>\n`;
     let itemSum = 0;
-    data.forEach((item) => {
+    req.body.forEach((item) => {
         if ('phone' in item) {
             message += `<b>Відправник: </b>${item.name}\n`;
             message += `<b>Телефон: </b>${item.phone}\n`;
@@ -28,4 +28,6 @@ export const SendData = (data) => {
     }).catch(error => {
         console.log(error.message);
     });
+
+    res.status(200).json({ name: req.body })
 }

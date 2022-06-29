@@ -3,7 +3,7 @@ import { Navigation, Pagination } from "swiper";
 import { Container } from "@mui/material";
 
 import CatalogItem from "../CatalogItem";
-import  millitems from '../../../api/catalog/goodsitems/milllistitem.json';
+import  millitems from '../../../pages/api/catalog/goodsitems/milllistitem.json';
 import ListHeader from "../ListHeader";
 
 import "swiper/css";

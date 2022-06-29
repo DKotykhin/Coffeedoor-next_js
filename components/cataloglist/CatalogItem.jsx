@@ -16,7 +16,7 @@ const CatalogItem = (props) => {
         <Card sx={{ maxWidth: 345 }} className={styles.catalog_list_card}>
             <Image                
                 height="345"
-                src={require(`../../api/catalog/goodsimages/${card_img}`)}
+                src={require(`../../pages/api/catalog/goodsimages/${card_img}`)}
                 alt={name}
             />
             <CardContent>

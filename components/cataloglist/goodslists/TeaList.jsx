@@ -11,7 +11,7 @@ import {
 import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
 
 import CatalogItem from "../CatalogItem";
-import teaitems from "../../../api/catalog/goodsitems/tealistitem.json";
+import teaitems from "../../../pages/api/catalog/goodsitems/tealistitem.json";
 import SelectFilterItems from "../../filters/SelectFilterItems";
 import ListHeader from "../ListHeader";
 
