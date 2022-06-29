@@ -30,7 +30,7 @@ export default function Home() {
                 />
                 <meta keywords="кава в зернах, кавомолка, кофе, кофемолка" />
                 <link rel="icon" href="/favicon.ico" />
-                <link rel="apple-touch-icon" href="/logo192.png" />
+                <link rel="apple-touch-icon" href="/logo_192x192.png" />
             </Head>
             <NavDrawer />
             <FirstBlock />
