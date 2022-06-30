@@ -38,9 +38,9 @@
             "description": "Японська професійна кавомолка HARIO Скіртон ПЛЮС. Оновлена ​​версія",
             "card_img": "mills/Skirton plus_1.webp",
             "list_img": [
-                "mills/Skirton plus_1.webp",
-                "mills/Skirton plus_2.webp",
-                "mills/Skirton plus_3.webp"
+                "mills/Skirton_plus_1.webp",
+                "mills/Skirton_plus_2.webp",
+                "mills/Skirton_plus_3.webp"
             ],
             "tm": "TM Hario",
             "sort": "Колір: чорний",
@@ -68,11 +68,11 @@
             "description": "Кавомолка HARIO Mini Mill Slim+ с керамічними жерновами та регулюванням помола",
             "card_img": "mills/Mini_Mill_Slim+_1.webp",
             "list_img": [
-                "mills/Mini_Mill_Slim+_1.webp",
-                "mills/Mini_Mill_Slim+_2.webp",
-                "mills/Mini_Mill_Slim+_3.webp",
-                "mills/Mini_Mill_Slim+_4.webp",
-                "mills/Mini_Mill_Slim+_5.webp"
+                "mills/Mini_Mill_Slim_plus_1.webp",
+                "mills/Mini_Mill_Slim_plus_2.webp",
+                "mills/Mini_Mill_Slim_plus_3.webp",
+                "mills/Mini_Mill_Slim_plus_4.webp",
+                "mills/Mini_Mill_Slim_plus_5.webp"
             ],
             "tm": "TM Hario",
             "sort": "Колір: прозорий",
