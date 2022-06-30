@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Provider } from "react-redux";
+import { useRouter } from 'next/router';
+
 import store from "../store/store";
 import Layout from "../components/footer/Layout";
 import Spinner from "../components/spinner/Spinner";
-import { useRouter } from 'next/router'
+
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
@@ -18,7 +20,7 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             {loading ? (
-                <Layout>
+                <Layout>                    
                    <Provider store={store}>
                      <Component {...pageProps} />
                    </Provider>
