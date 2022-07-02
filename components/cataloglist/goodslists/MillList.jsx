@@ -3,8 +3,8 @@ import { Navigation, Pagination } from "swiper";
 import { Container } from "@mui/material";
 
 import CatalogItem from "../CatalogItem";
-import  millitems from '../../../pages/api/catalog/goodsitems/milllistitem.json';
 import ListHeader from "../ListHeader";
+import  millitems from '../../../pages/api/catalog/goodsitems/milllistitem.json';
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -17,8 +17,7 @@ const MillList = () => {
             <ListHeader 
                 title='КАВОМОЛКИ' 
                 subtitle='Якщо треба змолоти каву вдома' />
-            <Swiper
-                // className="slider"
+            <Swiper               
                 slidesPerView={1.3}
                 spaceBetween={10}                
                 breakpoints={{                 

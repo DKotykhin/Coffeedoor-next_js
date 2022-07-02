@@ -1,10 +1,12 @@
 import { useDispatch } from "react-redux";
+import Image from 'next/image';
 
 import { Typography, Button, Box } from "@mui/material";
-import { Card, CardActions, CardContent, CardMedia } from '@mui/material';
+import { Card, CardActions, CardContent } from '@mui/material';
+
 import { basketAddItems } from "../basket/BasketListSlice";
 import { itemAddItems } from "../itemlist/ItemListSlice";
-import Image from 'next/image'
+
 import styles from './Stylelist.module.scss';
 
 const CatalogItem = (props) => {    

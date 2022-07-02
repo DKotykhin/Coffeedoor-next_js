@@ -41,8 +41,8 @@ export default function SelectFilterItems({ onSelect, quantity }) {
                     sx={{ display: "flex", flexWrap: "wrap", mt: 1 }}
                 >
                     {filterItems.map((item) => (
-                        <>
-                            <Badge
+                        <div key={item.key}>
+                            <Badge                                
                                 badgeContent={
                                     item.value === newItem ? quantity : 0
                                 }
@@ -50,8 +50,7 @@ export default function SelectFilterItems({ onSelect, quantity }) {
                             >
                                 <Chip
                                     sx={{ mb: 2 }}
-                                    variant="outlined"
-                                    key={item.key}
+                                    variant="outlined"                                    
                                     color={
                                         item.value === newItem ? "primary" : "default"
                                     }
@@ -59,7 +58,7 @@ export default function SelectFilterItems({ onSelect, quantity }) {
                                     onClick={() => handleSelect(item.value)}
                                 />
                             </Badge>
-                        </>
+                        </div>
                     ))}
                 </Stack>
             </ThemeProvider>

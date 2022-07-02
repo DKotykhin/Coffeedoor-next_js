@@ -11,9 +11,9 @@ import {
 import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
 
 import CatalogItem from "../CatalogItem";
-import teaitems from "../../../pages/api/catalog/goodsitems/tealistitem.json";
-import SelectFilterItems from "../../filters/SelectFilterItems";
 import ListHeader from "../ListHeader";
+import SelectFilterItems from "../../filters/SelectFilterItems";
+import teaitems from "../../../pages/api/catalog/goodsitems/tealistitem.json";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -63,14 +63,10 @@ const TeaList = () => {
                     <SelectFilterItems
                         onSelect={onSelectSort}
                         quantity={teaList.length}
-                    />
-                    {/* <Typography className="catalog_list_select">
-                        {'вибрано: '}{teaList.length}
-                    </Typography> */}
+                    />                    
                 </>
             )}
-            <Swiper
-                // className="slider"
+            <Swiper                
                 slidesPerView={1.3}
                 spaceBetween={10}
                 breakpoints={{

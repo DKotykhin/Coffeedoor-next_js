@@ -3,8 +3,8 @@ import { Navigation, Pagination } from "swiper";
 import { Container } from "@mui/material";
 
 import CatalogItem from "../CatalogItem";
-import  jamitems from '../../../pages/api/catalog/goodsitems/jamlistitem.json';
 import ListHeader from "../ListHeader";
+import  jamitems from '../../../pages/api/catalog/goodsitems/jamlistitem.json';
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -17,8 +17,7 @@ const JamList = () => {
             <ListHeader 
                 title='ВАРЕННЯ ARTVILLAGE' 
                 subtitle='Виготовлено виключно з натуральної сировини' />
-            <Swiper
-                // className="slider"
+            <Swiper                
                 slidesPerView={1.3}
                 spaceBetween={10}                
                 breakpoints={{                 
