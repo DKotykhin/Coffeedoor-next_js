@@ -10,7 +10,7 @@ import { itemAddItems } from "../itemlist/ItemListSlice";
 import styles from './Stylelist.module.scss';
 
 const CatalogItem = (props) => {    
-    const { title, name, description, price, weight, card_img, order } = props;
+    const { title, name, description, price, weight, card_img, order, sort } = props;
 
     const dispatch = useDispatch();
     
@@ -31,7 +31,7 @@ const CatalogItem = (props) => {
                 </Typography>
                 <Box className={styles.catalog_list_card_desc}>
                     {order &&
-                        <Typography color="#ff0000" sx={{mb:2}}>
+                        <Typography color="#ff0000" sx={{mb:1}} >
                             {'під замовлення'}
                         </Typography>
                     }
@@ -39,6 +39,11 @@ const CatalogItem = (props) => {
                         {description}
                     </Typography>
                 </Box>
+                { sort && 
+                    <Typography variant="body2" color="text.secondary" sx={{mt:1}}>
+                        {sort}
+                    </Typography>
+                }
                 { weight && 
                     <Typography variant="body2" color="text.secondary">
                         {'Вага: '}{weight}

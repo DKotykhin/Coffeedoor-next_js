@@ -3,6 +3,12 @@ import axios from "axios";
 export default function handler(req, res) {
     const TOKEN = process.env.TELEGRAM_TOKEN;
     const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+    if (!TOKEN) {
+        throw new Error("Define TOKEN environmental variable");
+    }
+    if (!CHAT_ID) {
+        throw new Error("Define CHAT_ID environmental variable");
+    }
     const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
     let message = `<b>Заявка з сайту</b>\n`;
     let itemSum = 0;

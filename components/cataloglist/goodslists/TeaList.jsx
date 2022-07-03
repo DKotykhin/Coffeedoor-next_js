@@ -58,14 +58,12 @@ const TeaList = () => {
                     Фільтри
                 </ListItemText>
             </ListItem>
-            {showSelector && (
-                <>
-                    <SelectFilterItems
-                        onSelect={onSelectSort}
-                        quantity={teaList.length}
-                    />                    
-                </>
-            )}
+            {showSelector &&                
+                <SelectFilterItems
+                    onSelect={onSelectSort}
+                    quantity={teaList.length}
+                />                
+            }
             <Swiper                
                 slidesPerView={1.3}
                 spaceBetween={10}
