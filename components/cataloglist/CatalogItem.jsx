@@ -17,7 +17,7 @@ const CatalogItem = (props) => {
     return (                   
         <Card sx={{ maxWidth: 345 }} className={styles.catalog_list_card}>
             <Image               
-                src={`/goodsimages/${card_img}`}
+                src={card_img ? `/goodsimages/${card_img}` : `/goodsimages/wait_1.webp`}
                 alt={name}
                 width={350}
                 height={350}

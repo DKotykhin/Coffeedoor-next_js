@@ -26,7 +26,7 @@ const SwipeImage = () => {
             {list_img?.map((item, i) => (
                 <SwiperSlide key={i}>
                     <Image                        
-                        src={`/goodsimages/${item}`}
+                        src={item ? `/goodsimages/${item}` : `/goodsimages/wait_1.webp`}
                         alt={name}
                         width={350}
                         height={350}

@@ -15,10 +15,14 @@ const ItemListSlice = createSlice({
             };
         },
 
+        itemRemoveItems: (state) => {
+            state.itemdata = {}
+        },
+
         itemRemoveQuantity: (state) => {
-            state.itemdata.quantity > 1
-                ? (state.itemdata.quantity -= 1)
-                : (state.itemdata.quantity = 1);
+            state.itemdata.quantity > 1 ?
+                (state.itemdata.quantity -= 1) :
+                (state.itemdata.quantity = 1);
         },
 
         itemAddQuantity: (state) => {
@@ -30,4 +34,4 @@ const ItemListSlice = createSlice({
 const { actions, reducer } = ItemListSlice;
 
 export default reducer;
-export const { itemAddItems, itemAddQuantity, itemRemoveQuantity } = actions;
+export const { itemAddItems, itemRemoveItems, itemAddQuantity, itemRemoveQuantity } = actions;
