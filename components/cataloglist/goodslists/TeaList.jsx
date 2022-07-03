@@ -21,11 +21,7 @@ import styles from "../Stylelist.module.scss";
 
 const TeaList = () => {
     const [showSelector, setShowSelector] = useState(false);
-    const [teaList, setTeaList] = useState([]);
-
-    useEffect(() => {
-        onSelectSort();
-    }, []);
+    const [teaList, setTeaList] = useState([...teaitems.teaitems]);
 
     const filtersOpen = () => {
         setShowSelector(!showSelector);
