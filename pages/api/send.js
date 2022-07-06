@@ -36,9 +36,9 @@ export default async function handler(req, res) {
             text: message,
         })
 
-        return res.status(200).json({ name: req.body, resp })
+        return res.status(200).json({ name: req.body, resp: resp.data })
     } catch(err) {
         console.log('err', err)
-        return res.status(500).json({ err })
+        return res.status(500).json({ err: err.message })
     }
 }
