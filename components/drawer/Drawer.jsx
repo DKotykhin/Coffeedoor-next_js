@@ -1,14 +1,31 @@
-import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import Image from "next/image";
+
 import { List, ListItem } from "@mui/material";
 import { Box, Drawer, Divider, Link as MuiLink } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import Image from "next/image";
+import classNames from "classnames";
 
 import styles from "./Drawer.module.scss";
 
+const groupOfTitle_1 = [
+    { title: "Кава в зернах", id: "#coffee_list" },
+    { title: "Листовий чай", id: "#tea_list" },
+    { title: "Кавомолки", id: "#mill_list" },
+    { title: "Аксессуари", id: "#acc_list" },
+    { title: "Варення", id: "#jam_list" },
+];
+const groupOfTitle_2 = [
+    { title: "Про нас", id: "#about_block" },
+    { title: "Контакти", id: "#footer_block" },
+];
+
 export default function NavDrawer() {
+    const router = useRouter();
     const [state, setState] = useState(false);
+
     const toggleDrawer = (open) => (event) => {
         if (
             event.type === "keydown" &&
@@ -18,18 +35,6 @@ export default function NavDrawer() {
         }
         setState(open);
     };
-
-    const groupOfTitle_1 = [
-        { title: "Кава в зернах", id: "#coffee_list" },
-        { title: "Листовий чай", id: "#tea_list" },
-        { title: "Кавомолки", id: "#mill_list" },
-        { title: "Аксессуари", id: "#acc_list" },
-        { title: "Варення", id: "#jam_list" },
-    ];
-    const groupOfTitle_2 = [
-        { title: "Про нас", id: "#about_block" },
-        { title: "Контакти", id: "#footer_block" },
-    ];
 
     return (
         <div className={styles.drawer}>
@@ -79,10 +84,27 @@ export default function NavDrawer() {
                     <Box className={styles.link_item}>
                         <Link href="/menu">
                             <span className={styles.link_button}>
-                                Меню кав&apos;ярні
+                                {"Меню кав'ярні"}
                             </span>
                         </Link>
                     </Box>
+                    {router.locales.map((locale) => (
+                        <span
+                            key={locale}
+                            className={classNames(
+                                styles.lang_button,
+                                router.locale === locale
+                                    ? styles.lang_active
+                                    : null
+                            )}
+                        >
+                            <Link 
+                                href={router.asPath} 
+                                locale={locale}>
+                                    {locale}
+                            </Link>
+                        </span>
+                    ))}
                 </Box>
             </Drawer>
         </div>

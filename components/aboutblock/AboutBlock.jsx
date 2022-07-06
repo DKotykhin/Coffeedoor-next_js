@@ -1,10 +1,16 @@
-
-import { Container, Box, ImageList, ImageListItem, Typography } from "@mui/material";
+import {
+    Container,
+    Box,
+    ImageList,
+    ImageListItem,
+    Typography,
+} from "@mui/material";
 import { ListItem, ListItemText, List, ListItemIcon } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import DoneIcon from "@mui/icons-material/Done";
 import { motion } from "framer-motion";
-import Image from 'next/image'
+import Image from "next/image";
+import classNames from "classnames";
 
 import styles from "./Aboutblock.module.scss";
 
@@ -17,16 +23,16 @@ const srcset = (image, width, height, rows = 1, cols = 1) => {
             height * rows
         }&fit=crop&auto=format&dpr=2 2x`,
     };
-}
+};
 
 const listVariants = {
-    visible: i => ({
+    visible: (i) => ({
         opacity: 1,
         transition: {
             delay: i * 0.3,
-        }
+        },
     }),
-    hidden: {opacity: 0}
+    hidden: { opacity: 0 },
 };
 
 export default function AboutBlock() {
@@ -47,8 +53,12 @@ export default function AboutBlock() {
     ];
 
     return (
-        <Container id="about_block" maxWidth="lg" className={styles.about_block}>
-            <Typography className={styles.about_title}>ПРО НАС</Typography>            
+        <Container
+            id="about_block"
+            maxWidth="lg"
+            className={styles.about_block}
+        >
+            <Typography className={styles.about_title}>ПРО НАС</Typography>
             <ImageList
                 sx={{
                     height: 800,
@@ -56,7 +66,6 @@ export default function AboutBlock() {
                 }}
                 gap={10}
             >
-                
                 {itemData.map((item, i) => {
                     const cols = item.size ? 2 : 1;
                     const rows = item.size ? 2 : 1;
@@ -65,8 +74,8 @@ export default function AboutBlock() {
                     return (
                         <ImageListItem key={i} cols={cols} rows={rows}>
                             <Image
-                                // {...srcset(item.img, 250, 200, rows, cols)}                                
-                                src={`/aboutimages/${item.img}`}                               
+                                // {...srcset(item.img, 250, 200, rows, cols)}
+                                src={`/aboutimages/${item.img}`}
                                 alt={item.title}
                                 width={width}
                                 height={height}
@@ -78,10 +87,15 @@ export default function AboutBlock() {
             </ImageList>
             <Box maxWidth="md" className={styles.about_box}>
                 <Typography className={styles.about_slogan}>
-                    {'Our coffee – Everything matters'}
+                    {"Our coffee – Everything matters"}
                 </Typography>
                 <ThemeProvider theme={theme}>
-                    <Typography className={[styles.about_descr, styles.about_font].join(" ")}>
+                    <Typography
+                        className={classNames(
+                            styles.about_descr,
+                            styles.about_font
+                        )}
+                    >
                         {`Особливість кав'ярень CoffeeDOOR Brewbar & Coffeeshop в
                         цілісному підході, де все має значення. При приготуванні
                         кави кожна деталь має значення - про це свідчить слоган
@@ -94,17 +108,19 @@ export default function AboutBlock() {
                         Speciality, в унікальній системі навчання бариста і
                         системі контролю якості.`}
                     </Typography>
-                    <Typography className={styles.about_font}>Ми - це:</Typography>
+                    <Typography className={styles.about_font}>
+                        Ми - це:
+                    </Typography>
                     <List className={styles.list_item}>
                         {benefitsItem.map((item, i) => (
-                            <motion.div 
+                            <motion.div
                                 key={i}
-                                initial='hidden'
-                                whileInView='visible'
+                                initial="hidden"
+                                whileInView="visible"
                                 variants={listVariants}
                                 custom={i}
                                 viewport={{ amount: 0.3, once: true }}
-                                >
+                            >
                                 <ListItem disablePadding>
                                     <ListItemIcon>
                                         <DoneIcon />
@@ -112,17 +128,21 @@ export default function AboutBlock() {
                                     <ListItemText>{item}</ListItemText>
                                 </ListItem>
                             </motion.div>
-                            ))
-                        }
+                        ))}
                     </List>
-                    <Typography className={[styles.about_descr, styles.about_font].join(" ")}>
+                    <Typography
+                        className={classNames(
+                            styles.about_descr,
+                            styles.about_font
+                        )}
+                    >
                         {`У наших кав'ярнях ви завжди відчуєте атмосферу радості і
                         доброти. Ми цінуємо смак і час наших гостей. Ми знаємо,
                         як звуть постійного гостя, його звички і улюблений
                         напій.`}
                     </Typography>
                     <br />
-                </ThemeProvider>               
+                </ThemeProvider>
             </Box>
         </Container>
     );
@@ -158,12 +178,12 @@ const itemData = [
     {
         img: "Coffeedoor_16.webp",
         title: "Coffee",
-        portrait: true
+        portrait: true,
     },
     {
         img: "Coffeedoor_17.webp",
         title: "Coffee",
-        portrait: true
+        portrait: true,
     },
     {
         img: "Coffeedoor_18.webp",

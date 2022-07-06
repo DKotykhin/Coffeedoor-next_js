@@ -1,6 +1,7 @@
 {
-    "locales": ["ua", "en-US", "ru"],
+    "locales": ["ua", "en", "ru"],
     "defaultLocale": "ua",
+    "localeDetection": false,
     "pages": {
         "*": ["common"],
         "/": ["infoblock"]

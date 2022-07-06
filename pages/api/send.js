@@ -1,6 +1,6 @@
 import axios from "axios";
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 export default function handler(req, res) {
     const TOKEN = process.env.TELEGRAM_TOKEN;
@@ -38,4 +38,5 @@ export default function handler(req, res) {
     });
 
     res.status(200).json({ name: req.body })
+
 }
