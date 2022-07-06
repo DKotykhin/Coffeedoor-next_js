@@ -49,10 +49,10 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function Accordeon() {
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = React.useState("");
 
     const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
+        setExpanded(isExpanded ? panel : "");
     };
 
     return (
@@ -84,7 +84,8 @@ export default function Accordeon() {
                                     {item.description}
                                 </Typography>
                                 <Typography sx={{ fontSize: 18 }}>
-                                    {item.price}{" грн"}
+                                    {item.price}
+                                    {" грн"}
                                 </Typography>
                             </Box>
                         ))}

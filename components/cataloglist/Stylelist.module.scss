@@ -38,12 +38,15 @@
             padding-bottom: 16px;
             min-height: 78px;
             @media (max-width: 600px) {
-                font-size: 19px;
+                font-size: 17px;
             }
         }
         &_price {
             font-size: 25px;
             margin-bottom: 10px;
+            @media (max-width: 600px) {
+                font-size: 20px;
+            }
         }
         &_desc {
             min-height: 80px;

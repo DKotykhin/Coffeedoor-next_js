@@ -1,3 +1,4 @@
+import useTranslation from 'next-translate/useTranslation'
 import {
     Container,
     Typography,
@@ -12,10 +13,13 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import styles from "./Infoblock.module.scss";
 
 const InfoBlock = () => {
+    let { t, lang } = useTranslation('infoblock');
+    console.log(lang)
     return (
         <Container maxWidth="md" className={styles.infoblock}>
             <Typography className={styles.infoblock_title} component="h1">
-               Кав&apos;ярня та магазин свіжообсмаженої кави CoffeeDoor
+                Кав&apos;ярня та магазин свіжообсмаженої кави CoffeeDoor
+                {t('title')}
             </Typography>
             <Typography className={styles.infoblock_subtitle} component="h2">
                 CoffeeDOOR – це кавовий бренд, який по&apos;єднує в собі
@@ -59,7 +63,8 @@ const InfoBlock = () => {
                     <Typography className={styles.infoblock_item_2}>
                         м.Харків, вул. Пушкінська, 50/52
                     </Typography>
-                    <Link className={styles.infoblock_item_3}                        
+                    <Link
+                        className={styles.infoblock_item_3}
                         href="tel:80997609883"
                     >
                         Телефон: +38 099 760 98 83
