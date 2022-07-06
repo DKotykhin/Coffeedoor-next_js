@@ -14,6 +14,86 @@ import classNames from "classnames";
 
 import styles from "./Aboutblock.module.scss";
 
+const benefitsItem = [
+    "Швидкий і якісний сервіс",
+    "Висока якість продукту",
+    "Різноманітність кави Speciality",
+    "Можливість придбати чай, каву в зернах і аксесуари для приготування кави вдома",
+    "Стильний і комфортний дизайн інтер'єру",
+    "Професійний підхід, де все має значення",
+];
+
+const itemData = [
+    {
+        img: "Coffeedoor_10.webp",
+        title: "Coffee",
+        size: true,
+    },
+    {
+        img: "Coffeedoor_11.webp",
+        title: "Coffee",
+    },
+    {
+        img: "Coffeedoor_12.webp",
+        title: "Coffee",
+    },
+    {
+        img: "Coffeedoor_13.webp",
+        title: "Coffee",
+        size: true,
+    },
+    {
+        img: "Coffeedoor_14.webp",
+        title: "Coffee",
+    },
+    {
+        img: "Coffeedoor_15.webp",
+        title: "Coffee",
+    },
+    {
+        img: "Coffeedoor_16.webp",
+        title: "Coffee",
+        portrait: true,
+    },
+    {
+        img: "Coffeedoor_17.webp",
+        title: "Coffee",
+        portrait: true,
+    },
+    {
+        img: "Coffeedoor_18.webp",
+        title: "Coffee",
+    },
+    {
+        img: "Coffeedoor_19.webp",
+        title: "Coffee",
+    },
+    {
+        img: "Coffeedoor_20.webp",
+        title: "Coffee",
+    },
+    {
+        img: "Coffeedoor_21.webp",
+        title: "Coffee",
+    },
+    {
+        img: "Coffeedoor_22.webp",
+        title: "Coffee",
+    },
+    {
+        img: "Coffeedoor_23.webp",
+        title: "Coffee table",
+    },
+    {
+        img: "Coffeedoor_24.webp",
+        title: "Coffee table",
+    },
+    {
+        img: "Coffeedoor_25.webp",
+        title: "Coffee table",
+    },
+];
+
 const srcset = (image, width, height, rows = 1, cols = 1) => {
     return {
         src: `${image}?w=${width * cols}&h=${
@@ -35,23 +115,14 @@ const listVariants = {
     hidden: { opacity: 0 },
 };
 
+const theme = createTheme({
+    typography: {
+        fontSize: 18,
+        fontWeightRegular: 300,
+    },
+});
+
 export default function AboutBlock() {
-    const theme = createTheme({
-        typography: {
-            fontSize: 18,
-            fontWeightRegular: 300,
-        },
-    });
-
-    const benefitsItem = [
-        "Швидкий і якісний сервіс",
-        "Висока якість продукту",
-        "Різноманітність кави Speciality",
-        "Можливість придбати чай, каву в зернах і аксесуари для приготування кави вдома",
-        "Стильний і комфортний дизайн інтер'єру",
-        "Професійний підхід, де все має значення",
-    ];
-
     return (
         <Container
             id="about_block"
@@ -147,74 +218,3 @@ export default function AboutBlock() {
         </Container>
     );
 }
-
-const itemData = [
-    {
-        img: "Coffeedoor_10.webp",
-        title: "Coffee",
-        size: true,
-    },
-    {
-        img: "Coffeedoor_11.webp",
-        title: "Coffee",
-    },
-    {
-        img: "Coffeedoor_12.webp",
-        title: "Coffee",
-    },
-    {
-        img: "Coffeedoor_13.webp",
-        title: "Coffee",
-        size: true,
-    },
-    {
-        img: "Coffeedoor_14.webp",
-        title: "Coffee",
-    },
-    {
-        img: "Coffeedoor_15.webp",
-        title: "Coffee",
-    },
-    {
-        img: "Coffeedoor_16.webp",
-        title: "Coffee",
-        portrait: true,
-    },
-    {
-        img: "Coffeedoor_17.webp",
-        title: "Coffee",
-        portrait: true,
-    },
-    {
-        img: "Coffeedoor_18.webp",
-        title: "Coffee",
-    },
-    {
-        img: "Coffeedoor_19.webp",
-        title: "Coffee",
-    },
-    {
-        img: "Coffeedoor_20.webp",
-        title: "Coffee",
-    },
-    {
-        img: "Coffeedoor_21.webp",
-        title: "Coffee",
-    },
-    {
-        img: "Coffeedoor_22.webp",
-        title: "Coffee",
-    },
-    {
-        img: "Coffeedoor_23.webp",
-        title: "Coffee table",
-    },
-    {
-        img: "Coffeedoor_24.webp",
-        title: "Coffee table",
-    },
-    {
-        img: "Coffeedoor_25.webp",
-        title: "Coffee table",
-    },
-];

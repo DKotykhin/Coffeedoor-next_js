@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 
 import Accordeon from "../components/accordeon/Accordeon";
 import TitleBlock from "../components/titleblock/TitleBlock";
@@ -12,7 +12,6 @@ const MenuPage = () => {
             </Head>
             <TitleBlock />
             <Accordeon />
-            
         </div>
     );
 };

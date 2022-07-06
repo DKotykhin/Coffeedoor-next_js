@@ -15,6 +15,7 @@ import {
 } from "./BasketListSlice";
 import BasketIcon from "./BasketIcon";
 import BasketForm from "./BasketForm";
+import { selectBasket } from "../../store/selectors";
 
 import styles from './Basket.module.scss'
 
@@ -37,7 +38,7 @@ const Basket = () => {
     const [open, setOpen] = React.useState(false);
     const router = useRouter()
 
-    const { basketdata } = useSelector((state) => state.basket);
+    const { basketdata } = useSelector(selectBasket);
     const dispatch = useDispatch();
 
     const handleOpen = () => setOpen(true);

@@ -3,6 +3,14 @@ import * as React from "react";
 import { Box, Stack, Chip, Badge } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+const filterItems = [
+    { key: "всі чаї", value: "" },
+    { key: "зелені", value: "зелений" },
+    { key: "чорні", value: "чорний" },
+    { key: "трав'яні", value: "трав'яний" },
+    { key: "фруктові", value: "фруктовий" },
+];
+
 const theme = createTheme({
     palette: {
         primary: {
@@ -13,14 +21,6 @@ const theme = createTheme({
 
 export default function SelectFilterItems({ onSelect, quantity }) {
     const [newItem, setNewItem] = React.useState("");
-
-    const filterItems = [
-        { key: "всі чаї", value: "" },
-        { key: "зелені", value: "зелений" },
-        { key: "чорні", value: "чорний" },
-        { key: "трав'яні", value: "трав'яний" },
-        { key: "фруктові", value: "фруктовий" },
-    ];
 
     React.useEffect(() => {
         handleSelect("");
@@ -42,7 +42,7 @@ export default function SelectFilterItems({ onSelect, quantity }) {
                 >
                     {filterItems.map((item) => (
                         <div key={item.key}>
-                            <Badge                                
+                            <Badge
                                 badgeContent={
                                     item.value === newItem ? quantity : 0
                                 }
@@ -50,9 +50,11 @@ export default function SelectFilterItems({ onSelect, quantity }) {
                             >
                                 <Chip
                                     sx={{ mb: 2 }}
-                                    variant="outlined"                                    
+                                    variant="outlined"
                                     color={
-                                        item.value === newItem ? "primary" : "default"
+                                        item.value === newItem
+                                            ? "primary"
+                                            : "default"
                                     }
                                     label={item.key}
                                     onClick={() => handleSelect(item.value)}

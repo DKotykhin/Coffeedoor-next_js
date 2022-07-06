@@ -12,11 +12,16 @@ import styles from "../Stylelist.module.scss";
 
 const CoffeeList = () => {
     return (
-        <Container id="coffee_list" className={styles.catalog_list} maxWidth="xl">            
-            <ListHeader 
-                title='КАВА В ЗЕРНАХ' 
-                subtitle='Свіжообсмажена кава ТМ CoffeeDOOR' />
-            <Swiper                
+        <Container
+            id="coffee_list"
+            className={styles.catalog_list}
+            maxWidth="xl"
+        >
+            <ListHeader
+                title="КАВА В ЗЕРНАХ"
+                subtitle="Свіжообсмажена кава ТМ CoffeeDOOR"
+            />
+            <Swiper
                 slidesPerView={1.3}
                 spaceBetween={10}
                 breakpoints={{

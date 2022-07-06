@@ -1,9 +1,9 @@
 import { Typography } from "@mui/material";
 
-import styles from './Stylelist.module.scss'
+import styles from "./Stylelist.module.scss";
 
-const ListHeader = ({ title, subtitle}) => {
-    return(
+const ListHeader = ({ title, subtitle }) => {
+    return (
         <>
             <Typography className={styles.catalog_list_title}>
                 {title}
@@ -12,7 +12,7 @@ const ListHeader = ({ title, subtitle}) => {
                 {subtitle}
             </Typography>
         </>
-    )
-}
+    );
+};
 
 export default ListHeader;

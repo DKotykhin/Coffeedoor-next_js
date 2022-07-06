@@ -18,20 +18,20 @@ import { FormValidation } from "./BasketFormValidation";
 
 import styles from "./Basketform.module.scss";
 
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: "#00a1b6",
+        },
+    },
+});
+
 const BasketForm = ({ onSubmit }) => {
     const {
         control,
         handleSubmit,
         formState: { errors, isValid },
     } = useForm(FormValidation);
-
-    const theme = createTheme({
-        palette: {
-            primary: {
-                main: "#00a1b6",
-            },
-        },
-    });
 
     return (
         <>
@@ -110,6 +110,9 @@ const BasketForm = ({ onSubmit }) => {
                             </FormControl>
                         )}
                     />
+                    <Typography className={styles.error}>
+                        {errors.delivery?.message}
+                    </Typography>
                     <InputLabel
                         htmlFor="text"
                         className={classNames(
@@ -133,7 +136,7 @@ const BasketForm = ({ onSubmit }) => {
                         )}
                     />
                     <Button
-                        disabled={!isValid}
+                        // disabled={!isValid}
                         className={styles.submitbutton}
                         type="submit"
                     >

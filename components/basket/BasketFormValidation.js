@@ -10,15 +10,18 @@ const schema = yup.object({
         .min(2, 'Мінімум 2 символа для заповнення'),
     phone: yup
         .string()
-        .required("Обов'язкове поле!")           
-        .phone('UA', true, 'Введіть правильний номер')
-  });
-  
+        .required("Обов'язкове поле!")
+        .phone('UA', true, 'Введіть правильний номер'),
+    delivery: yup
+        .string()
+        .required("Виберіть спосіб доставки")
+});
+
 export const FormValidation = {
     defaultValues: {
-        name: '',      
-        phone: '',        
-      },
+        name: '',
+        phone: '',
+    },
     resolver: yupResolver(schema),
     mode: 'onBlur'
 }

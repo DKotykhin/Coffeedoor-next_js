@@ -1,9 +1,9 @@
 import Footer from "./Footer";
 
-const Layout = ({children}) => (
+const Layout = ({ children }) => (
     <>
         {children}
-        <Footer/>
+        <Footer />
     </>
 );
 

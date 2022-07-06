@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Head from 'next/head';
+import Head from "next/head";
 import { Typography } from "@mui/material";
 
 import ErrorMessage from "../components/errorMessage/ErrorMessage";

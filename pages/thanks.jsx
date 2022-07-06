@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import ThanksBlock from "/components/thanks/ThanksBlock";
 
 const ThanksPage = () => {
@@ -7,8 +7,8 @@ const ThanksPage = () => {
             <Head>
                 <meta name="description" content="Дякуємо за замовлення" />
                 <title>Дякуємо за замовлення</title>
-            </Head>            
-            <ThanksBlock/>
+            </Head>
+            <ThanksBlock />
         </div>
     );
 };

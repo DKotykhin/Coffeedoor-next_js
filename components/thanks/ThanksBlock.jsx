@@ -9,17 +9,17 @@ import styles from "./Thanksblock.module.scss";
 
 const ThanksBlock = () => {
     return (
-        <Container maxWidth="md" className={styles.thanks_block}>            
+        <Container maxWidth="md" className={styles.thanks_block}>
             <Link href="/">
                 <Box className={styles.img}>
-                    <Image 
-                        src={'/logo_700x191.jpg'} 
+                    <Image
+                        src={"/logo_700x191.jpg"}
                         alt="logo"
                         width={700}
-                        height={191} 
+                        height={191}
                     />
                 </Box>
-            </Link>            
+            </Link>
             <Typography component="h1" className={styles.thanks_title}>
                 Дякуємо за замовлення!
             </Typography>
