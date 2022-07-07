@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Backdrop, Box, Modal, Fade, Button, Typography } from "@mui/material";
@@ -37,13 +37,9 @@ const style = {
 };
 
 export default function ItemList() {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
     const dispatch = useDispatch();
-
-    const handleClose = () => {
-        dispatch(itemRemoveItems())
-        setOpen(false);
-    }
+    
     const { itemdata } = useSelector(selectItemPage);
     const {
         name,
@@ -60,6 +56,17 @@ export default function ItemList() {
         additional_list,
     } = itemdata;
 
+    useEffect(() => {
+        if (Object.keys(itemdata).length) {
+            setOpen(true);
+        }
+    }, [itemdata]);
+
+    const handleClose = () => {
+        dispatch(itemRemoveItems());
+        setOpen(false);
+    };
+
     const handleDecrement = () => {
         dispatch(itemRemoveQuantity());
     };
@@ -70,104 +77,94 @@ export default function ItemList() {
         setOpen(false);
         dispatch(itemRemoveItems());
         dispatch(basketAddFromItemPage(item));
-    };
-
-    React.useEffect(() => {
-        if (Object.keys(itemdata).length) {
-            setOpen(true);
-        }
-    }, [itemdata]);
+    };    
 
     return (
-        <div>
-            <Modal
-                open={open}
-                onClose={handleClose}
-                closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                    timeout: 500,
-                }}
-            >
-                <Fade in={open}>
-                    <Box sx={style} className={styles.item_list}>
-                        <CloseIcon
-                            className={styles.item_list_close}
-                            onClick={handleClose}
-                        />
-                        <SwipeImage />
+        <Modal
+            open={open}
+            onClose={handleClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+                timeout: 500,
+            }}
+        >
+            <Fade in={open}>
+                <Box sx={style} className={styles.item_list}>
+                    <CloseIcon
+                        className={styles.item_list_close}
+                        onClick={handleClose}
+                    />
+                    <SwipeImage />
 
-                        <Typography sx={{ mt: 2 }} variant="h6" component="h2">
-                            {title} {name}
+                    <Typography sx={{ mt: 2 }} variant="h6" component="h2">
+                        {title} {name}
+                    </Typography>
+                    <Typography className={styles.item_list_price}>
+                        {price}
+                        {" грн"}
+                    </Typography>
+                    <Typography className={styles.item_list_quantity}>
+                        <RemoveCircleOutlineIcon
+                            className={styles.item_list_remove}
+                            onClick={handleDecrement}
+                        />
+                        {quantity}
+                        <AddCircleOutlineIcon
+                            className={styles.item_list_add}
+                            onClick={handleIncrement}
+                        />
+                        <Button
+                            className={styles.item_list_button}
+                            onClick={() => handleBasket(itemdata)}
+                        >
+                            В Кошик
+                        </Button>
+                    </Typography>
+                    {weight && (
+                        <Typography variant="body2">
+                            {"Вага: "}
+                            {weight}
                         </Typography>
-                        <Typography className={styles.item_list_price}>
-                            {price}
-                            {" грн"}
+                    )}
+                    {sort && <Typography variant="body2">{sort}</Typography>}
+                    {tm && (
+                        <Typography variant="body2">
+                            {"Виробник: "}
+                            {tm}
                         </Typography>
-                        <Typography className={styles.item_list_quantity}>
-                            <RemoveCircleOutlineIcon
-                                className={styles.item_list_remove}
-                                onClick={handleDecrement}
-                            />
-                            {quantity}
-                            <AddCircleOutlineIcon
-                                className={styles.item_list_add}
-                                onClick={handleIncrement}
-                            />
-                            <Button
-                                className={styles.item_list_button}
-                                onClick={() => handleBasket(itemdata)}
-                            >
-                                В Кошик
-                            </Button>
+                    )}
+                    {country && (
+                        <Typography variant="body2">
+                            {"Країна: "}
+                            {country}
                         </Typography>
-                        {weight && (
-                            <Typography variant="body2">
-                                {"Вага: "}
-                                {weight}
-                            </Typography>
-                        )}
-                        {sort && (
-                            <Typography variant="body2">{sort}</Typography>
-                        )}
-                        {tm && (
-                            <Typography variant="body2">
-                                {"Виробник: "}
-                                {tm}
-                            </Typography>
-                        )}
-                        {country && (
-                            <Typography variant="body2">
-                                {"Країна: "}
-                                {country}
-                            </Typography>
-                        )}
-                        <Typography sx={{ mt: 2, mb: 2 }} variant="body2">
-                            {description}
+                    )}
+                    <Typography sx={{ mt: 2, mb: 2 }} variant="body2">
+                        {description}
+                    </Typography>
+                    {additional_text_1?.map((item, i) => (
+                        <Typography key={i} variant="body2">
+                            {item}
                         </Typography>
-                        {additional_text_1?.map((item, i) => (
-                            <Typography key={i} variant="body2">
-                                {item}
-                            </Typography>
+                    ))}
+                    <List className="list">
+                        {additional_list?.map((item, i) => (
+                            <ListItem disablePadding key={i}>
+                                <ListItemIcon>
+                                    <DoneIcon />
+                                </ListItemIcon>
+                                <ListItemText>{item}</ListItemText>
+                            </ListItem>
                         ))}
-                        <List className="list">
-                            {additional_list?.map((item, i) => (
-                                <ListItem disablePadding key={i}>
-                                    <ListItemIcon>
-                                        <DoneIcon />
-                                    </ListItemIcon>
-                                    <ListItemText>{item}</ListItemText>
-                                </ListItem>
-                            ))}
-                        </List>
-                        {additional_text_2?.map((item, i) => (
-                            <Typography key={i} variant="body2" sx={{ mt: 2 }}>
-                                {item}
-                            </Typography>
-                        ))}
-                    </Box>
-                </Fade>
-            </Modal>
-        </div>
+                    </List>
+                    {additional_text_2?.map((item, i) => (
+                        <Typography key={i} variant="body2" sx={{ mt: 2 }}>
+                            {item}
+                        </Typography>
+                    ))}
+                </Box>
+            </Fade>
+        </Modal>
     );
 }

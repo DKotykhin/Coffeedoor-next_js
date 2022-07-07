@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { Container } from "@mui/material";
 
 import CatalogItem from "../CatalogItem";
@@ -30,7 +30,9 @@ const JamList = () => {
                 }}
                 // rewind={true}
                 navigation={true}
-                modules={[Navigation, Pagination]}
+                // simulateTouch={false}
+                threshold={20}
+                modules={[Navigation]}                
             >
                 {jamitems.jamitems.map((item) => (
                     <SwiperSlide key={item.name}>

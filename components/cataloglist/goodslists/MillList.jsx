@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { Container } from "@mui/material";
 
 import CatalogItem from "../CatalogItem";
@@ -29,8 +29,9 @@ const MillList = () => {
                     },
                 }}
                 // rewind={true}
+                threshold={20}
                 navigation={true}
-                modules={[Navigation, Pagination]}
+                modules={[Navigation]}
             >
                 {millitems.millitems.map((item) => (
                     <SwiperSlide key={item.name}>

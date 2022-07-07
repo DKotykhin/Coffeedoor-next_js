@@ -1,6 +1,4 @@
 import axios from "axios";
-// import dotenv from 'dotenv';
-// dotenv.config();
 
 export default async function handler(req, res) {
     try {
@@ -36,8 +34,8 @@ export default async function handler(req, res) {
             text: message,
         })
 
-        return res.status(200).json({ name: req.body, resp: resp.data })
-    } catch(err) {
+        return res.status(200).json({ name: req.body, resp: resp.data.ok })
+    } catch (err) {
         console.log('err', err)
         return res.status(500).json({ err: err.message })
     }

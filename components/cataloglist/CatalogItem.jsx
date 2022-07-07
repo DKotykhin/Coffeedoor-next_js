@@ -16,7 +16,7 @@ const CatalogItem = (props) => {
     const dispatch = useDispatch();
 
     return (
-        <Card sx={{ maxWidth: 345 }} className={styles.catalog_list_card}>
+        <Card sx={{ maxWidth: 350 }} className={styles.catalog_list_card}>
             <Image
                 src={
                     card_img

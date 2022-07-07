@@ -33,6 +33,7 @@ const CoffeeList = () => {
                     },
                 }}
                 //rewind={true}
+                threshold={20}
                 navigation={true}
                 modules={[Navigation]}
             >

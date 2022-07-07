@@ -1,9 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+
 import { Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-
-// import img from "../titleblock/Coffeedoor_logo.jpg";
 
 import styles from "./Thanksblock.module.scss";
 

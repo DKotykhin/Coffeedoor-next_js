@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { motion, AnimatePresence } from "framer-motion";
 import { Container, ListItemText, ListItemIcon, ListItem } from "@mui/material";
 import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
@@ -68,8 +68,9 @@ const TeaList = () => {
                     },
                 }}
                 // rewind={true}
+                threshold={20}
                 navigation={true}
-                modules={[Navigation, Pagination]}
+                modules={[Navigation]}
             >
                 <AnimatePresence initial={false}>
                     {teaList?.map((item) => (
